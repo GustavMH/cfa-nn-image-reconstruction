@@ -1,7 +1,7 @@
 ---
-author: Frederik Altmann & Gustav Mark-Hansen
+author: Gustav Emil Mark-Hansen, Frederik Henriques Altmann, Christian Igel & Ankit Kariryaa
 ---
-# CFA-RAW
+# Demosaicing and Neural Network Based Image Reconstruction in the Presence of Noise
 
 Code for generating CFA data, and training U-Net models.
 
