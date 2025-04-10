@@ -1,5 +1,5 @@
 ---
-author: Gustav Emil Mark-Hansen, Frederik Henriques Altmann, Christian Igel & Ankit Kariryaa
+Authors: Gustav Emil Mark-Hansen, Frederik Henriques Altmann, Christian Igel & Ankit Kariryaa
 ---
 # Demosaicing and Neural Network Based Image Reconstruction in the Presence of Noise
 
