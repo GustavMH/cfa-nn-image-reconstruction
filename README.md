@@ -15,6 +15,3 @@ Training loop: [notebooks/train.py](notebooks/train.py)
 noise augmentation + .dng convertion: [notebooks/ds_augment.py](notebooks/ds_augment.py)
 
 .dng convertion: [notebooks/ds_convert.py](notebooks/ds_convert.py)
-
-### Misc.
-Slurm specific scripts: [workarounds/](workarounds/)
