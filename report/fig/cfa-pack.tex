@@ -1,0 +1,27 @@
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \begin{scope}[shift={(0,0)}, local bounding box=sensorin]
+      \filldraw[fill=green!50]   (0,0)     rectangle (1,1);
+      \fill[fill=red!50]  (0,0)     rectangle (.25,.25);
+      \fill[fill=red!50]  (.5,0)    rectangle (.75,.25);
+      \fill[fill=red!50]  (.5,.5)   rectangle (.75,.75);
+      \fill[fill=red!50]  (0,.5)    rectangle (.25,.75);
+      \fill[fill=blue!50] (.25,.25) rectangle (.5,.5);
+      \fill[fill=blue!50] (.75,.25) rectangle (1,.5);
+      \fill[fill=blue!50] (.25,.75) rectangle (.5,1);
+      \fill[fill=blue!50] (.75,.75) rectangle (1,1);
+      \draw[step=.25,very thin] (0,0) grid (1,1);
+    \end{scope}
+    \begin{scope}[shift={(3.8,0.1)}, local bounding box=inter_layers]
+      \filldraw[fill=blue!50]  (0.3,0.3) rectangle (0.8,0.8);
+      \filldraw[fill=green!50] (0.2,0.2) rectangle (0.7,0.7);
+      \filldraw[fill=green!50] (0.1,0.1) rectangle (0.6,0.6);
+      \filldraw[fill=red!50]   (0,0)     rectangle (.5,.5);
+      \draw[step=.25,very thin] (0,0) grid (.5,.5);
+    \end{scope}
+    \draw[->, line width=.5mm] (sensorin.east) -- node[above] {} (inter_layers.west);
+  \end{tikzpicture}
+  \caption{CFA packing}
+  \label{fig:cfapack}
+\end{figure}

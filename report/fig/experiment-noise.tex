@@ -1,0 +1,42 @@
+\usetikzlibrary{positioning, shadows}
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[
+  doc/.style={draw, minimum height=3em, minimum width=2em, 
+                fill=white, 
+                double copy shadow={shadow xshift=4pt, 
+                             shadow yshift=4pt, fill=white, draw}},
+  ]
+    \node[inner sep=.5pt, draw=black, very thick] (step1) at (0,0)
+    {\includegraphics[width=1.5cm]{img/pipeline_1}};
+    \node[inner sep=.5pt, draw=black, very thick] (step2) at (4,0)
+    {\includegraphics[width=1.5cm]{img/pipeline_2}};
+    \node[inner sep=.5pt, draw=black, very thick] (step3) at (8,0)
+    {\includegraphics[width=1.5cm]{img/pipeline_3}};
+    \node[inner sep=.5pt, draw=black, very thick] (step4) at (12.5,0)
+    {\includegraphics[width=1.5cm]{img/pipeline_4}};
+    \node[inner sep=.5pt, draw=black, very thick] (stepA) at (4,-4.3)
+    {\includegraphics[width=1.5cm]{img/pipeline_1}};
+    \node[inner sep=.5pt, draw=black, very thick] (step5) at (8,-4.3)
+    {\includegraphics[width=1.5cm]{img/pipeline_5}};
+    \node[inner sep=.5pt, draw=black, very thick] (step6) at (12.5,-4.3)
+    {\includegraphics[width=1.5cm]{img/pipeline_6}};
+    \node[] (m1) at (8,    -3.1) {CFA Model};
+    \node[] (m2) at (12.5, -3.1) {RGB Model};
+    \node[] (mA) at (4,    -3.1) {Baseline Model};
+    \draw[->, very thick] (step1) -- node[above] {Add noise}  (step2);
+    \draw[->, very thick] (step2) -- node[above] {CFA filter} (step3);
+    \draw[->, very thick] (step3) -- node[above] {}  (step4);
+    \draw[->, very thick] (step3) -- node[above] {}  (m1);
+    \draw[->, very thick] (step4) -- node[above] {}  (m2);
+    \draw[->, very thick] (step2) -- node[above] {}  (mA);
+
+    \node[doc] (npy) at (8, -2) {.npy};
+    \node[doc] (png) at (4, -2) {.png};
+    \node[doc] (dng) at (10, 0) {.dng};
+    \node[above=1em of dng] {Demosaic};
+    
+  \end{tikzpicture}
+  \caption{Experiment pipeline}
+  \label{fig:ex-pipeline}
+\end{figure}
